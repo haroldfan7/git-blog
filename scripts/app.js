@@ -51,19 +51,42 @@
     </article>
   `;
 
+  const renderLegalAiItem = (item) => `
+    <article class="tool-tile">
+      <div class="tile-meta">
+        <span>${escapeHtml(item.type || "Tool")}</span>
+        <span>${escapeHtml(item.status || "Draft")}</span>
+      </div>
+      <h3>${escapeHtml(item.title || item.name)}</h3>
+      <p>${escapeHtml(item.summary)}</p>
+      <div class="post-tags">${formatTags(item.tags)}</div>
+    </article>
+  `;
+
+  const renderWritingTitle = (item) => `
+    <article class="title-row">
+      <a href="${articleUrl(item.slug)}">${escapeHtml(item.title)}</a>
+      <span>${escapeHtml(item.date)}</span>
+    </article>
+  `;
+
+  const renderShareItem = (item) => `
+    <article class="share-row">
+      <p class="meta">${escapeHtml(item.date)} / ${escapeHtml(item.kind || "Share")}</p>
+      <h3>${escapeHtml(item.title)}</h3>
+      <p>${escapeHtml(item.summary)}</p>
+    </article>
+  `;
+
   const renderHome = () => {
-    const featured = articles.filter((item) => item.featured);
-    const recent = articles.filter((item) => !item.featured);
+    const legalAiTarget = byRenderKey("legalAi");
+    const writingTarget = byRenderKey("writingLaw");
+    const shareTarget = byRenderKey("share");
+    const legalAiItems = content.legalAi || content.tools || [];
 
-    const featuredTarget = byRenderKey("featuredArticles");
-    const recentTarget = byRenderKey("recentArticles");
-    const projectTarget = byRenderKey("projects");
-    const toolTarget = byRenderKey("tools");
-
-    if (featuredTarget) featuredTarget.innerHTML = featured.map(renderPostCard).join("");
-    if (recentTarget) recentTarget.innerHTML = recent.map(renderPostCard).join("");
-    if (projectTarget) projectTarget.innerHTML = (content.projects || []).map(renderPlainItem).join("");
-    if (toolTarget) toolTarget.innerHTML = (content.tools || []).map(renderPlainItem).join("");
+    if (legalAiTarget) legalAiTarget.innerHTML = legalAiItems.map(renderLegalAiItem).join("");
+    if (writingTarget) writingTarget.innerHTML = articles.slice(0, 3).map(renderWritingTitle).join("");
+    if (shareTarget) shareTarget.innerHTML = (content.share || []).map(renderShareItem).join("");
   };
 
   const renderArticle = () => {

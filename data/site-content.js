@@ -1,4 +1,44 @@
 window.siteContent = {
+  legalAi: [
+    {
+      type: "Script",
+      status: "Maintained",
+      title: "合同条款检查清单生成器",
+      summary:
+        "输入合同类型和审查重点，生成可复用的条款检查清单，适合初审、复核和团队协作。",
+      tags: ["合同审查", "JavaScript", "清单"],
+    },
+    {
+      type: "Skill",
+      status: "Experiment",
+      title: "AI 法律检索提示词模板",
+      summary:
+        "把检索目的、事实背景、争点、输出格式写成固定模板，让每次检索更稳定、更便于复核。",
+      tags: ["AI", "检索", "提示词"],
+    },
+    {
+      type: "Mini App",
+      status: "Planning",
+      title: "证据文件批量命名工具",
+      summary:
+        "按照日期、主体、文件类型和序号批量整理文件名，减少证据目录制作时的手工错误。",
+      tags: ["证据", "自动化", "文件整理"],
+    },
+  ],
+  share: [
+    {
+      date: "2026-06-13",
+      kind: "Life",
+      title: "一个更安静的网站",
+      summary: "少一些组件和装饰，把更新压力降下来，让这个站点更像长期可用的工作台。",
+    },
+    {
+      date: "2026-06-13",
+      kind: "Note",
+      title: "设备与工作流",
+      summary: "Windows、iPad、iPhone 先跑起来，之后即使换到 Mac，也尽量不改变内容维护方式。",
+    },
+  ],
   projects: [
     {
       period: "2025",

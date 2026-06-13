@@ -35,11 +35,10 @@
           <span>13.06.2026</span>
         </div>
         <nav class="site-nav" aria-label="主导航">
-          <a href="index.html">Articles</a>
+          <a href="#legal-ai">Legal AI</a>
+          <a href="#writing-law">Writing & Law</a>
+          <a href="#share">Share</a>
           <a href="tags.html">Tags</a>
-          <a href="#projects">Projects</a>
-          <a href="#tools">Scripts</a>
-          <a href="#about">About</a>
         </nav>
         <button class="theme-toggle" type="button" aria-label="切换明暗模式">◐</button>
       </div>
@@ -48,92 +47,68 @@
     <main id="main" class="site-shell">
       <section class="hero editorial-hero">
         <p class="place-line">China · Remote · LegalTech · AI Workflow</p>
-        <h1>A lawyer, learning and shipping with AI.</h1>
+        <h1>Legal AI, writing, and small shares.</h1>
         <p class="hero-copy">
-          Jason7 · lawyer and legal technology practitioner. Notes, scripts and project records
-          about litigation work, contract review, evidence management and practical AI workflows.
+          Jason7 · lawyer and legal technology practitioner. This site is intentionally simple:
+          a durable home for legal automation scripts, legal writing, and occasional notes from life.
         </p>
 
         <dl class="fact-grid">
           <div>
-            <dt>Practice</dt>
-            <dd>Dispute resolution · Compliance</dd>
+            <dt>Main</dt>
+            <dd>Legal AI scripts and skills</dd>
           </div>
           <div>
             <dt>Writing</dt>
-            <dd>AI notes · Legal scripts</dd>
+            <dd>Law notes and methods</dd>
           </div>
           <div>
-            <dt>Stack</dt>
-            <dd>HTML · JS · Supabase-ready</dd>
+            <dt>Share</dt>
+            <dd>Life notes and small finds</dd>
           </div>
           <div>
-            <dt>Cadence</dt>
-            <dd>Quiet, durable updates</dd>
+            <dt>Maintain</dt>
+            <dd>Static files · GitHub Pages</dd>
           </div>
         </dl>
-
-        <div class="route-board" aria-label="站点概览">
-          <a href="#featured-heading"><span>01</span> Reading</a>
-          <a href="#recent-heading"><span>02</span> Writing</a>
-          <a href="#projects"><span>03</span> Cases</a>
-          <a href="#tools"><span>04</span> Coding</a>
-        </div>
       </section>
 
       <div class="status-strip" aria-label="当前关注">
-        CURRENTLY · AI assisted legal research · evidence timelines · contract checklists ·
-        file automation · quiet writing · reliable static publishing ·
+        CURRENTLY · legal automation · AI skills · evidence timelines · contract checklists ·
+        writing & law · life notes · reliable static publishing ·
       </div>
 
-      <section class="section" aria-labelledby="featured-heading">
-        <div class="section-kicker">§ 01 · ARTICLES</div>
-        <div class="section-head">
-          <h2 id="featured-heading">The journal — legal work, kept in public</h2>
-          <a class="text-link" href="tags.html">All →</a>
-        </div>
-        <div class="post-list" data-render="featuredArticles"></div>
-      </section>
+      <section class="home-columns" aria-label="首页栏目">
+        <section id="legal-ai" class="home-panel legal-ai-panel" aria-labelledby="legal-ai-heading">
+          <div class="section-kicker">§ 01 · LEGAL AI</div>
+          <div class="panel-head">
+            <h2 id="legal-ai-heading">Scripts, skills, and small apps for legal work</h2>
+            <p>
+              法律自动化脚本、AI skill、小程序和工作流实验。这里是首页的主栏目，
+              用来放可以被复用、下载、迭代的工具。
+            </p>
+          </div>
+          <div class="tool-board" data-render="legalAi"></div>
+        </section>
 
-      <section class="section" aria-labelledby="recent-heading">
-        <div class="section-kicker">§ 02 · RECENT</div>
-        <div class="section-head">
-          <h2 id="recent-heading">Recent notes</h2>
-        </div>
-        <div class="post-list" data-render="recentArticles"></div>
-      </section>
+        <aside class="side-stack">
+          <section id="writing-law" class="home-panel" aria-labelledby="writing-law-heading">
+            <div class="section-kicker">§ 02 · WRITING & LAW</div>
+            <div class="panel-head compact-head">
+              <h2 id="writing-law-heading">Recent writing</h2>
+              <a class="text-link" href="tags.html">All →</a>
+            </div>
+            <div class="title-list" data-render="writingLaw"></div>
+          </section>
 
-      <section id="projects" class="section" aria-labelledby="projects-heading">
-        <div class="section-kicker">§ 03 · PROJECTS</div>
-        <div class="section-head">
-          <h2 id="projects-heading">Selected work — cases and systems</h2>
-        </div>
-        <div class="plain-list" data-render="projects"></div>
-      </section>
-
-      <section id="tools" class="section" aria-labelledby="tools-heading">
-        <div class="section-kicker">§ 04 · SCRIPTS</div>
-        <div class="section-head">
-          <h2 id="tools-heading">Small legal tools</h2>
-        </div>
-        <div class="plain-list compact" data-render="tools"></div>
-      </section>
-
-      <section id="about" class="section about" aria-labelledby="about-heading">
-        <div class="section-kicker">§ 05 · ABOUT</div>
-        <div class="section-head">
-          <h2 id="about-heading">A quiet, reliable personal site</h2>
-        </div>
-        <div class="prose">
-          <p>
-            这个网站首要目标是简单、可靠、易维护。它不依赖复杂构建工具，内容集中在一个数据文件中，
-            可以直接打开，也可以部署到 Vercel。
-          </p>
-          <p>
-            AI 和脚本不是为了替代法律判断，而是把可重复、可验证、可交付的部分沉淀下来，
-            让时间更多留给事实、证据、策略和客户目标。
-          </p>
-        </div>
+          <section id="share" class="home-panel" aria-labelledby="share-heading">
+            <div class="section-kicker">§ 03 · SHARE</div>
+            <div class="panel-head compact-head">
+              <h2 id="share-heading">Anything else</h2>
+            </div>
+            <div class="share-list" data-render="share"></div>
+          </section>
+        </aside>
       </section>
     </main>
 
