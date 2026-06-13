@@ -423,6 +423,14 @@ dd {
   font-size: 18px;
 }
 
+.share-row h3 a {
+  text-decoration: none;
+}
+
+.share-row h3 a:hover {
+  text-decoration: underline;
+}
+
 .share-row p:last-child {
   margin-bottom: 0;
   color: var(--muted);
@@ -620,6 +628,23 @@ h3 {
   padding-left: 16px;
   border-left: 3px solid var(--line);
   color: var(--muted);
+}
+
+.prose figure {
+  margin: 1.6em 0;
+}
+
+.prose figure img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.prose figcaption {
+  margin-top: 8px;
+  color: var(--soft);
+  font-size: 14px;
 }
 
 .prose mark {

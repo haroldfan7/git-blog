@@ -29,6 +29,13 @@ window.siteContent = {
     {
       date: "2026-06-13",
       kind: "Life",
+      title: "记住初夏",
+      summary: "离开案头和空调会议室，走到雨后初晴的上海园区楼下，重新感到夏天。",
+      slug: "remember-early-summer",
+    },
+    {
+      date: "2026-06-13",
+      kind: "Life",
       title: "一个更安静的网站",
       summary: "少一些组件和装饰，把更新压力降下来，让这个站点更像长期可用的工作台。",
     },
@@ -89,6 +96,25 @@ window.siteContent = {
     },
   ],
   articles: [
+    {
+      slug: "remember-early-summer",
+      date: "2026-06-13",
+      category: "Share",
+      title: "记住初夏",
+      summary: "离开案头和空调会议室，走到雨后初晴的上海园区楼下，重新感到夏天。",
+      readingTime: "约 1 分钟",
+      featured: false,
+      tags: ["Share", "生活", "上海", "夏天"],
+      content: `
+        <p>追寻夏天的感觉。离开案头、走出空调会议室，园区的楼下，已是雨过天晴。5月底的上海，夏天的画卷逐步展开。热风带着水汽和地面蒸腾的热气在树叶间穿梭。身体在出汗，我喜欢阳光下这种略微难受的感觉。一年四季、春夏秋冬，皆是生活。</p>
+        <figure>
+          <img src="assets/share/remember-early-summer-01.jpg" alt="雨后初晴的初夏景色" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="assets/share/remember-early-summer-02.jpg" alt="上海五月底的初夏景色" loading="lazy" />
+        </figure>
+      `,
+    },
     {
       slug: "ai-in-legal-work",
       date: "2026-05-31",

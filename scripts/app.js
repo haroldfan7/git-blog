@@ -73,7 +73,11 @@
   const renderShareItem = (item) => `
     <article class="share-row">
       <p class="meta">${escapeHtml(item.date)} / ${escapeHtml(item.kind || "Share")}</p>
-      <h3>${escapeHtml(item.title)}</h3>
+      <h3>${
+        item.slug
+          ? `<a href="${articleUrl(item.slug)}">${escapeHtml(item.title)}</a>`
+          : escapeHtml(item.title)
+      }</h3>
       <p>${escapeHtml(item.summary)}</p>
     </article>
   `;
@@ -85,7 +89,13 @@
     const legalAiItems = content.legalAi || content.tools || [];
 
     if (legalAiTarget) legalAiTarget.innerHTML = legalAiItems.map(renderLegalAiItem).join("");
-    if (writingTarget) writingTarget.innerHTML = articles.slice(0, 3).map(renderWritingTitle).join("");
+    if (writingTarget) {
+      writingTarget.innerHTML = articles
+        .filter((item) => item.category !== "Share")
+        .slice(0, 3)
+        .map(renderWritingTitle)
+        .join("");
+    }
     if (shareTarget) shareTarget.innerHTML = (content.share || []).map(renderShareItem).join("");
   };
 
