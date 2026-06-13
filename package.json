@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "publish": "node scripts/publish-md.js --push",
+    "import": "node scripts/publish-md.js"
+  }
+}

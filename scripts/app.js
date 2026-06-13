@@ -57,7 +57,11 @@
         <span>${escapeHtml(item.type || "Tool")}</span>
         <span>${escapeHtml(item.status || "Draft")}</span>
       </div>
-      <h3>${escapeHtml(item.title || item.name)}</h3>
+      <h3>${
+        item.slug
+          ? `<a href="${articleUrl(item.slug)}">${escapeHtml(item.title || item.name)}</a>`
+          : escapeHtml(item.title || item.name)
+      }</h3>
       <p>${escapeHtml(item.summary)}</p>
       <div class="post-tags">${formatTags(item.tags)}</div>
     </article>

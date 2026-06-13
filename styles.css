@@ -367,6 +367,14 @@ dd {
   line-height: 1.05;
 }
 
+.tool-tile h3 a {
+  text-decoration: none;
+}
+
+.tool-tile h3 a:hover {
+  text-decoration: underline;
+}
+
 .tool-tile p {
   color: var(--muted);
 }

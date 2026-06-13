@@ -83,6 +83,84 @@ https://yourname.github.io/personal-site/
 - `tags`：标签
 - `content`：文章正文 HTML
 
+## 用 Markdown 自动发布
+
+你也可以不用手工编辑 `data/site-content.js`。现在项目里已经有本地发布脚本：
+
+```powershell
+npm run publish
+```
+
+推荐工作流：
+
+1. 在本地建立待发布文件夹。
+   默认配置是：`D:/obsidian install/sync remote alpha/网站待发布`
+2. 把写好的 `.md` 文件放进这个文件夹。
+3. 在网站项目目录运行：
+
+```powershell
+npm run publish
+```
+
+脚本会自动：
+
+- 扫描待发布文件夹里的 `.md`
+- 读取文章开头的 frontmatter
+- 把 Markdown 转成网页正文
+- 复制 Obsidian 图片引用到 `assets/articles`
+- 写入 `data/site-content.js`
+- 创建 Git 提交
+- 推送到 GitHub
+
+### Markdown 文件格式
+
+文章开头建议写：
+
+```md
+---
+title: 文章标题
+date: 2026-06-13
+section: writing
+slug: article-slug
+tags: [法律, AI]
+summary: 这里写一句摘要。
+---
+
+正文从这里开始。
+```
+
+`section` 支持三种：
+
+- `writing`：发布到 Writing & Law
+- `share`：发布到 Share
+- `legal-ai`：发布到 Legal AI，并生成可点击的工具卡片
+
+### 图片写法
+
+支持 Obsidian 图片格式：
+
+```md
+![[IMG_0006.jpeg]]
+```
+
+脚本会在 Markdown 文件同目录和配置里的附件目录中查找图片，然后复制到网站的 `assets/articles/文章-slug/` 目录。
+
+### 本机配置
+
+本机私有配置文件是：
+
+```text
+publish.config.json
+```
+
+它已经被 `.gitignore` 忽略，不会上传到 GitHub。公开仓库里只保留：
+
+```text
+publish.config.example.json
+```
+
+如果你想换待发布文件夹，只改 `publish.config.json` 里的 `draftsDir`。
+
 ## 如何替换个人信息
 
 在 `index.html`、`article.html`、`tags.html` 中搜索并替换：
