@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Jason7 的文章标签页。" />
+    <title>标签 · Jason7</title>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = theme || (prefersDark ? "dark" : "light");
+        } catch (error) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="tags">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header">
+      <div class="site-shell header-inner">
+        <a class="identity" href="index.html" aria-label="Jason7 首页">
+          <img class="avatar" src="头像.jpg" alt="Jason7 的头像" />
+          <span>Jason7</span>
+        </a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="index.html">首页</a>
+          <a href="tags.html">标签</a>
+          <a href="index.html#projects">项目</a>
+          <a href="index.html#tools">脚本</a>
+          <a href="index.html#about">关于</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="切换明暗模式">◐</button>
+      </div>
+    </header>
+
+    <main id="main" class="site-shell">
+      <section class="hero compact-hero">
+        <p class="eyebrow">Tags</p>
+        <h1>标签</h1>
+        <p class="lead">按主题浏览文章。保持标签数量克制，方便长期维护。</p>
+      </section>
+      <section class="section" data-render="tags"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-inner">
+        <span>© <span id="year"></span> Jason7</span>
+        <span class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#main">Top</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="data/site-content.js"></script>
+    <script src="scripts/supabase-config.example.js"></script>
+    <script src="scripts/supabase-client.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="个人品牌标识">
+  <rect x="8" y="8" width="80" height="80" rx="10" fill="#FFFFFF"/>
+  <rect x="8.75" y="8.75" width="78.5" height="78.5" rx="9.25" stroke="#0B3F3D" stroke-width="1.5"/>
+  <path d="M48 21V74" stroke="#0B3F3D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M30 35H66" stroke="#0B3F3D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M36 35L25 58H47L36 35Z" stroke="#B88A35" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60 35L49 58H71L60 35Z" stroke="#B88A35" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M35 74H61" stroke="#0B3F3D" stroke-width="4" stroke-linecap="round"/>
+</svg>
