@@ -224,21 +224,6 @@ body[data-page="tags"] .site-shell {
   font-size: 20px;
 }
 
-.fact-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  margin: 34px 0 0;
-  border: 1px solid var(--line);
-  background: var(--line);
-}
-
-.fact-grid div {
-  min-height: 116px;
-  padding: 16px;
-  background: var(--paper);
-}
-
 dt {
   color: var(--soft);
   font-size: 13px;
@@ -782,7 +767,6 @@ pre code {
     padding-top: 50px;
   }
 
-  .fact-grid,
   .route-board,
   .home-columns,
   .tool-board {
@@ -815,7 +799,6 @@ pre code {
     font-size: clamp(48px, 18vw, 72px);
   }
 
-  .fact-grid,
   .route-board,
   .tool-board {
     grid-template-columns: 1fr;
